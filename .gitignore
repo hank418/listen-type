@@ -3,3 +3,5 @@
 *.dmg
 ListenType/Package.resolved
 .DS_Store
+docs/
+scripts/
