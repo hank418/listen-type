@@ -78,6 +78,15 @@ ollama pull gemma3:4b
 
 未安裝 Ollama 時 app 仍可正常使用，只是輸出原始轉錄文字。Menu bar 選單會顯示 Ollama 連線狀態。
 
+## 解除安裝
+
+1. 從 `Applications` 刪除 `ListenType.app`
+2. 刪除模型資料（約 3GB）：
+
+```bash
+rm -rf ~/Library/Application\ Support/ListenType
+```
+
 ## 建置（開發者）
 
 ```bash

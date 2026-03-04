@@ -76,6 +76,12 @@ struct MenuBarView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
             Divider()
+            Button("刪除模型資料並結束") {
+                let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+                let listenTypeDir = appSupport.appendingPathComponent("ListenType")
+                try? FileManager.default.removeItem(at: listenTypeDir)
+                NSApplication.shared.terminate(nil)
+            }
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
             }
